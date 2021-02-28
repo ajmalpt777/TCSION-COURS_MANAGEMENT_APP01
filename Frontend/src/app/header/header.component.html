@@ -1,0 +1,12 @@
+<mat-toolbar color="primary" fxLayout="row">
+    <mat-toolbar-row class="head">
+    <a mat-list-item  [routerLink]="['/']" ><mat-icon>home</mat-icon> </a>
+    <a mat-list-item  [routerLink]="['/login-user']" *ngIf="! auth.logIn()" routerLinkActive="is-active">Login S </a>
+    <a mat-list-item  [routerLink]="['/signup-user']" *ngIf="! auth.logIn()" routerLinkActive="is-active">SignUp S </a>
+    <a mat-list-item  [routerLink]="['/login-prof']" *ngIf="! auth.logIn()" routerLinkActive="is-active">Login P </a>
+    <a mat-list-item  [routerLink]="['/signup-prof']" *ngIf="! auth.logIn()" routerLinkActive="is-active">SignUp P </a>
+    <a mat-list-item  [routerLink]="['/course-taken']" *ngIf="auth.loggedProfIn()" routerLinkActive="is-active">Courses </a>
+    <a mat-list-item  [routerLink]="['/add-course']" *ngIf="auth.loggedProfIn()" routerLinkActive="is-active">Add Course </a>
+    <a mat-list-item  (click)="logout()" *ngIf="auth.logIn()">Logout </a>
+</mat-toolbar-row>
+</mat-toolbar>

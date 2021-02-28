@@ -1,0 +1,13 @@
+.head a{
+    display:flex;
+    padding: 10px 10px;
+}
+.mat-toolbar-row a {
+    color: white;
+    text-decoration: none;
+}
+
+[mat-menu-item].is-active,
+  [mat-list-item].is-active {
+    background: hsla(0, 0%, 100%, 0.1);
+  }

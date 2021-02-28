@@ -1,0 +1,74 @@
+
+<div class='card-header' style="width: 100">
+
+    <div class='card' style="width: 100%">
+   
+       <div class='card-header' style="width: 100">
+           <h3>Add Course </h3>
+       </div>
+       <div class='card-body' style="width: 100">
+           <div class="row justify-content-center" >    
+               
+
+            <div class="col-md-8"> 
+        
+                <div class="panel">
+                  <div class="panel-body">
+                    
+                    
+               
+                    <!--/stories-->
+                    <form (ngSubmit)="AddCourse()" #addcourseform="ngForm">
+                      <div class="form-group">
+                          <label >Course Name</label>
+                          <input type="text" name="c_name" [(ngModel)]="courseItem.name" #cname='ngModel' placeholder="Type Name Of Course" class="form-control"  required>
+                          <small class="text-danger" [class.d-none]="cname.valid || cname.touched">Empty Value Not Supported</small>    
+        
+                        </div>
+
+                        <div class="form-group">
+                          <label >Image</label>
+                          <input type="text" name="c_img" [(ngModel)]="courseItem.image" #cimg='ngModel' class="form-control"  required>
+                          <small class="text-danger" [class.d-none]="cimg.valid || cimg.touched">Empty Value Not Supported</small>    
+        
+                        </div>
+
+                        <div class="form-group">
+                          <label >Teacher</label>
+                          <input type="text" name="c_prof" [(ngModel)]="courseItem.professor" #cprof='ngModel' placeholder="Type Teacher" class="form-control"  required>
+                          <small class="text-danger" [class.d-none]="cprof.valid || cprof.touched">Empty Value Not Supported</small>    
+        
+                        </div>
+
+                        <div class="form-group">
+                            <label >Email</label>
+                            <input type="text" name="c_email" [(ngModel)]="courseItem.email" #cemail='ngModel' placeholder="Type Registered Email" class="form-control"  required>
+                            <small class="text-danger" [class.d-none]="cemail.valid || cemail.touched">Empty Value Not Supported</small>    
+          
+                          </div>
+
+                        <div class="form-group">
+                            <label >Duration</label>
+                            <input type="text" name="c_dur" [(ngModel)]="courseItem.duration" #cdur='ngModel' placeholder="Type Duration" class="form-control"  required>
+                            <small class="text-danger" [class.d-none]="cdur.valid || cdur.touched">Empty Value Not Supported</small>    
+          
+                          </div>
+
+                          <div class="form-group">
+                            <label >Details</label>
+                            <input type="text" name="c_details" [(ngModel)]="courseItem.details" #cdet='ngModel' placeholder="Type More Details" class="form-control" >
+          
+                          </div>
+
+                      <button type="submit"  value="Submit" class="btn btn-primary btn-block" [disabled]="addcourseform.form.invalid">Submit</button>
+          </form>
+
+          </div></div></div>
+
+   
+   
+       </div>
+   </div>
+   
+   
+

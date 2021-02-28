@@ -1,0 +1,11 @@
+<form   (ngSubmit)="loginUser()" #userlogin="ngForm" fxLayoutAlign="stretch" fxLayout="column">
+    <mat-form-field>
+      <input matInput type="email" name="username"  placeholder="Email"  #email='ngModel' pattern="^[a-z0-9.%+]+@[a-z0-9.-]+\.[a-z]{2,4}$" [class.is-invalid]="email.invalid && email.touched" [(ngModel)]="user.username" required >      
+    </mat-form-field>
+
+    <mat-form-field>
+      
+      <input  matInput placeholder="Password" type="password" name="password" #pass='ngModel'  [(ngModel)]="user.password" minlength="8" required>
+    </mat-form-field>
+    <button mat-raised-button type="submit" color="primary"   [disabled]="userlogin.form.invalid" >Submit</button>   
+</form>

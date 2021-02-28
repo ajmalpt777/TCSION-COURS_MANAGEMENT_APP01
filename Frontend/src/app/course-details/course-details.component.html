@@ -1,0 +1,40 @@
+<div class="container" *ngFor='let course of courseItem'>
+    <div class="row" >
+        <mat-icon color="warn" >edit</mat-icon>
+    </div>
+<div class="row">
+    <div class="col lg-4 md-4" >
+     <table class="table">
+       <tbody>
+         <tr>
+           <th>Course Name</th>
+           <td>{{ course.name.toUpperCase() }}</td>
+         </tr>
+         <tr>
+           <th>Professor</th>
+           <td>{{ course.professor }}</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+
+   <div class="col lg-4 md-4" >
+     <table class="table">
+       <tbody>
+         <tr>
+           <th>Duration</th>
+           <td>{{ course.duration }}</td>
+         </tr>
+         <tr>
+           <th>Details</th>
+           <td>{{ course.details }}</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+
+   </div>
+   <button mat-raised-button color="primary" *ngIf="auth.loggedUserIn() && enrollRequest==false " (click)="enroll(course)">Enroll</button>
+   <button mat-raised-button color="primary" *ngIf="auth.loggedUserIn() && enrollRequest==true " (click)="cancel(course)">Cancel</button>
+
+  </div>

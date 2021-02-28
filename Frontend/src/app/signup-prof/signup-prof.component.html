@@ -1,0 +1,51 @@
+<div class='card-header' style="width: 100">
+
+    <div class='card' style="width: 100%">
+   
+
+       <div class='card-body' style="width: 100">
+           <div class="row justify-content-center" >    
+               
+
+            <div class="col-md-8"> 
+        
+                <div class="panel">
+                  <div class="panel-body">
+                    
+                    
+               
+    
+                    <form (ngSubmit)="signupProf()" #signupuserform="ngForm" fxLayoutAlign="stretch" fxLayout="column">
+                      <mat-form-field>
+                          
+                          <input matInput type="text" name="name1" [(ngModel)]="user.name1" #name1='ngModel' placeholder="Name"   required>
+        
+                        </mat-form-field>
+
+                        <mat-form-field>
+                    
+                            <input matInput type="email" name="email1" placeholder="Email"   #email1='ngModel' pattern="^[a-z0-9.%+]+@[a-z0-9.-]+\.[a-z]{2,4}$" [class.is-invalid]="email1.invalid && email1.touched" [(ngModel)]="user.email1" required>
+                        </mat-form-field>
+                  
+                
+                        
+                    
+                            <mat-form-field>
+                            <input matInput type="password" name="password1" placeholder="Password"  #pass1='ngModel' class="form-control" #password1='ngModel' [(ngModel)]="user.password1" minlength="8" required>
+                        </mat-form-field>
+                        
+                        <mat-form-field>
+        
+                            <input matInput type="password" name="password2" placeholder="Re-Enter Password" #pass2='ngModel'  class="form-control" [(ngModel)]="user.password2" #password2='ngModel' pattern="{{user.password1}}" required >
+                        </mat-form-field>
+
+                      <button type="submit"  value="Submit" class="btn btn-primary btn-block" [disabled]="signupuserform.form.invalid">Submit</button>
+          </form>
+
+          </div></div></div>
+
+   
+   
+       </div>
+   </div>
+

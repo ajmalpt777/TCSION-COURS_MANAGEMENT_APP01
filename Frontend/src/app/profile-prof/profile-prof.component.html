@@ -1,0 +1,53 @@
+<div class="container" *ngFor='let profile of profItem'>
+    <div class="row" >
+        <mat-icon color="warn" (click)="editProfile(profile)">edit</mat-icon>
+    </div>
+<div class="row">
+    <div class="col lg-4 md-4" >
+     <table class="table">
+       <tbody>
+         <tr>
+           <th>Full Name</th>
+           <td>{{ profile.name.toUpperCase() }}</td>
+         </tr>
+         <tr>
+           <th>Address</th>
+           <td>{{ profile.address }}</td>
+         </tr>
+         <tr>
+           <th>Email Address</th>
+           <td>{{ profile.email }}</td>
+         </tr>
+         <tr>
+           <th>D.O.B</th>
+           <td>{{ profile.dob }}</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+
+   <div class="col lg-4 md-4" >
+     <table class="table">
+       <tbody>
+         <tr>
+           <th>Mother Tongue</th>
+           <td>{{ profile.mothertongue }}</td>
+         </tr>
+         <tr>
+           <th>Other Languages</th>
+           <td>{{ profile.languages }}</td>
+         </tr>
+         <tr>
+           <th>Highest Education Qualification</th>
+           <td>{{ profile.education }}</td>
+         </tr>
+         <tr>
+           <th>Hobbies</th>
+           <td>{{ profile.hobbies }}</td>
+         </tr>
+       </tbody>
+     </table>
+   </div>
+
+   </div>
+</div>
